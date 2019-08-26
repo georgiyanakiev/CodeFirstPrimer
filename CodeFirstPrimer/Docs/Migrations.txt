@@ -1,0 +1,13 @@
+﻿===========================NHLContext==============================================
+
+Enable-Migrations -ContextTypeName NhlContext -MigrationsDirectory Migrations\NHL
+add-migration -ConfigurationTypeName CodeFirstPrimer.Migrations.NHL.Configuration "InitialCreate"
+update-database -ConfigurationTypeName CodeFirstPrimer.Migrations.NHL.Configuration
+
+=======================================ApplicationDbContext========================
+
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+
+add-migration -ConfigurationTypeName CodeFirstPrimer.Migrations.Identity.Configuration "InitialIdentity" 
+
+update-database -ConfigurationTypeName CodeFirstPrimer.Migrations.Identity.Configuration
